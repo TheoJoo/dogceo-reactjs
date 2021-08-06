@@ -1,38 +1,316 @@
-.App {
+/*                            Reset CSS                              *\
+  TODO : try to do it proprely with a basic stylesheet (like KNACSS)
+\*                                                                   */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* General GRID */
+.body-container {
+  font-family:FontNamuAi;
+
+  display: grid;
+  grid-template-columns: 5em 1fr 5em ;
+  grid-auto-rows: minmax(0, auto);
   text-align: center;
-}
+  align-items: center;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
+  .header-logo {
+    background-color: white;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    grid-column: 1/4;
   }
+
+  .shadow{
+    -webkit-box-shadow: 0 10px 15px #888888;
+    -moz-box-shadow: 0 10px 15px #888888;
+    box-shadow: 0 10px 15px #888888;
+
+    transition: 0.5s;
+  }
+
+  .tableTitle {
+    grid-column: 2;
+
+    text-align: center;
+    align-items: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-auto-rows: minmax(0, auto);
+  }
+    .tableTitle-h1 {
+      color: #2f2f41;
+    }
+
+  .container-table-loader{
+    grid-column: 2;
+  }
+
+  .dogsList {
+    grid-column: 2;
+  }
+    .dogsList-row {
+      text-align: center;
+      align-items: center;
+      margin-top: 1em;
+      margin-bottom: 1em;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) ;
+      grid-auto-rows: minmax(0, auto);
+    }
+      .dogsList-row-dogName {
+        text-transform: capitalize;
+        font-family: 'Montserrat';
+        font-weight: 400;
+
+        border: none;
+        border-radius: 0.5em;
+
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+
+      }
+    
+    .footer-credits {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      grid-column: 2;
+      text-align: center;
+    }
+
+
+/* GENERAL CSS */
+h1 {
+  font-size: 28px;
+  font-family: 'Montserrat';
+  letter-spacing: 1.25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input, button {
+  cursor: pointer;
+}
+
+button.dogsList-row-dogName:hover  {
+  background-color: #336eea;
+  color: #fbfdfe;
+}
+
+button.dogsList-row-dogName:focus  {
+  background-color: #336eea;
+  color: #fbfdfe;
+}
+
+.visited  {
+  background-color: #a2adbc;
+  color: #fbfdfe;
+}
+
+a {
+  color: #5c5a5a;
+  text-decoration: none;
+}
+
+
+/* CHECKBOX CUSTOM */
+.tableTitle-checkbox-input {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tableTitle-checkbox-label {
+  margin-bottom: 0.5em;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.heart-icon {
+  cursor: pointer;
+  padding: 0.5em;
+  height: 2em;
+  width: 2em;
+  color: #60bca0;
+  border-radius: 1em;
+}
+  .heart-icon:hover {
+    background: radial-gradient(#60bca0, rgb(243, 246, 251), transparent);
   }
-  to {
-    transform: rotate(360deg);
+
+.heart-icon-checked{
+  cursor: pointer;
+  padding: 0.5em;
+  height: 2em;
+  width: 2em;
+  color: #60bca0;
+  border-radius: 1em;
+  opacity:1;
+  transition: 0.3s;
+}
+  .heart-icon-checked:hover {
+    opacity: 0.8;
   }
+
+/* MODAL */
+.header-Modal {
+  text-align: center;
+  align-items: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) ;
+  grid-auto-rows: minmax(0, auto);
+}
+
+.modal-dogName {
+  background-color: #336eea;
+  color: #fbfdfe;
+
+  font-family: 'Montserrat';
+  font-weight: 400;
+
+  border: none;
+  border-radius: 0.5em;
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.modal-container-images{
+  font-family: FontNamuAi;
+  text-transform: capitalize;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  max-height: 75%;
+}
+
+.img-Modal {
+  max-width: 100%;
+  max-height: 80%;
+}
+
+.sub-title-Modal {
+  padding: 1em;
+  color: #60bca0;
+}
+
+.tableauImages-Modal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(0, auto);
+  gap: 0.5em;
+  text-align: center;
+}
+  .subBreed {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 3em 15em;
+    min-height:100%;
+  }
+    .subBreed-dogName {
+      padding: 1em;
+      padding-bottom: 1em;
+    }
+
+    .subBreed-image {
+      width: 100%;
+      height: 100%;
+    }
+
+  .noSubBreeds-Modal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(0, auto);
+    gap: 0.5em;
+    text-align: center;
+    margin-top: 3vw;
+  }
+
+  .pawprint-end-Modal {
+    width: 20%;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .noSubbreeds-text-Modal{align-self: center;}
+
+  .pawprint-start-Modal {
+    width: 20%;
+    justify-self: start;
+    align-self: center;
+  }
+
+
+/* MOBILE VERSION */
+@media screen and (max-width: 800px){
+
+  .header-Modal {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  
+  .modal-container-images{
+    max-height: 80%;
+  }
+
+  .tableauImages-Modal {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+  }
+
+  .noSubBreeds-Modal {
+    margin-top: calc(200px - 18vw);
+  }
+}
+
+@media screen and (max-width: 480px){
+  .tableauImages-Modal {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* FONT */
+@font-face {
+  font-family: 'FontNamuAi';
+  src: local('FontNamuAi'),
+       url('./fonts/fontnamuai.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_vx3rCs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
