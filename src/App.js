@@ -13,8 +13,7 @@ const App = () =>{
   const [isLoading, setIsLoading] = useState(true);
   const [favList, setFavList] = useState(false);
   const[isOpen, setIsOpen] = useState(false);
-  const [dogModal, setDogModal] = useState([])
-  const [modalLoading, setModalLoading] = useState(true);
+  const [dogModal, setDogModal] = useState([]);
 
   useEffect(() => {
     const fetchDogs = async () => {
@@ -77,19 +76,22 @@ const App = () =>{
     const tempDogModal = await fetchBreedUrl()
     setDogModal(tempDogModal)
     setIsOpen(true) 
-    setModalLoading(false)
   }
 
   function closeModal(){
     setIsOpen(false) 
-    setModalLoading(true)
   }
+
+  useEffect(() => {
+    
+  }, [])
+
 
   return (
     <div className="body-container">
       <Header />
       <TableTitle favList={favList} dogs={dogs} handleFavListClick={handleFavListClick}/>
-      <Modal isOpen={isOpen} modalLoading={modalLoading} onClose={closeModal} dogModal={dogModal} toggleFav={toggleFav}></Modal>
+      <Modal isOpen={isOpen} onClose={closeModal} dogModal={dogModal} toggleFav={toggleFav}></Modal>
       <DogsList isLoading={isLoading} dogs={dogs} toggleFav={toggleFav} favList={favList} modalFetch={modalFetch}/>
       <Footer />
     </div>
