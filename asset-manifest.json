@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dogceo-reactjs/static/css/main.9103f814.chunk.css",
-    "main.js": "/dogceo-reactjs/static/js/main.30657c89.chunk.js",
-    "main.js.map": "/dogceo-reactjs/static/js/main.30657c89.chunk.js.map",
+    "main.js": "/dogceo-reactjs/static/js/main.480461b2.chunk.js",
+    "main.js.map": "/dogceo-reactjs/static/js/main.480461b2.chunk.js.map",
     "runtime-main.js": "/dogceo-reactjs/static/js/runtime-main.069faaa9.js",
     "runtime-main.js.map": "/dogceo-reactjs/static/js/runtime-main.069faaa9.js.map",
-    "static/js/2.0c2de103.chunk.js": "/dogceo-reactjs/static/js/2.0c2de103.chunk.js",
-    "static/js/2.0c2de103.chunk.js.map": "/dogceo-reactjs/static/js/2.0c2de103.chunk.js.map",
+    "static/js/2.d024a961.chunk.js": "/dogceo-reactjs/static/js/2.d024a961.chunk.js",
+    "static/js/2.d024a961.chunk.js.map": "/dogceo-reactjs/static/js/2.d024a961.chunk.js.map",
     "index.html": "/dogceo-reactjs/index.html",
     "static/css/main.9103f814.chunk.css.map": "/dogceo-reactjs/static/css/main.9103f814.chunk.css.map",
-    "static/js/2.0c2de103.chunk.js.LICENSE.txt": "/dogceo-reactjs/static/js/2.0c2de103.chunk.js.LICENSE.txt",
+    "static/js/2.d024a961.chunk.js.LICENSE.txt": "/dogceo-reactjs/static/js/2.d024a961.chunk.js.LICENSE.txt",
     "static/media/exit.add3cc24.svg": "/dogceo-reactjs/static/media/exit.add3cc24.svg",
     "static/media/App.css": "/dogceo-reactjs/static/media/fontnamuai.5f7f3d61.woff2",
     "static/media/logo.1742e3ee.png": "/dogceo-reactjs/static/media/logo.1742e3ee.png",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.069faaa9.js",
-    "static/js/2.0c2de103.chunk.js",
+    "static/js/2.d024a961.chunk.js",
     "static/css/main.9103f814.chunk.css",
-    "static/js/main.30657c89.chunk.js"
+    "static/js/main.480461b2.chunk.js"
   ]
 }
